@@ -1,0 +1,5 @@
+COSAS TFG:
+pip install basex-api
+
+Abrir Jupyter
+Abrir server BASEX
