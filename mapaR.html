@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_8cccda4476edd18f2593a1c23b0dac11 {
+                #map_019f417b2032d0eef2d03ab5f1496dfe {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -35,20 +35,18 @@
                 .leaflet-container { font-size: 1rem; }
             </style>
         
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.css"/>
 </head>
 <body>
     
     
-            <div class="folium-map" id="map_8cccda4476edd18f2593a1c23b0dac11" ></div>
+            <div class="folium-map" id="map_019f417b2032d0eef2d03ab5f1496dfe" ></div>
         
 </body>
 <script>
     
     
-            var map_8cccda4476edd18f2593a1c23b0dac11 = L.map(
-                "map_8cccda4476edd18f2593a1c23b0dac11",
+            var map_019f417b2032d0eef2d03ab5f1496dfe = L.map(
+                "map_019f417b2032d0eef2d03ab5f1496dfe",
                 {
                     center: [40.4168, -3.7038],
                     crs: L.CRS.EPSG3857,
@@ -62,39 +60,43 @@
 
         
     
-            var tile_layer_1160af729835d9fa920c7d28e3277088 = L.tileLayer(
+            var tile_layer_2f53ec4cc2ef0e638ef2a2e900ffa43a = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_8cccda4476edd18f2593a1c23b0dac11);
+            ).addTo(map_019f417b2032d0eef2d03ab5f1496dfe);
         
     
-            var options = {
-              position: "topleft",
-              draw: {"circle": true, "circlemarker": false, "marker": false, "polygon": true, "polyline": false, "rectangle": true},
-              edit: {},
-            }
-            // FeatureGroup is to store editable layers.
-            var drawnItems = new L.featureGroup().addTo(
-                map_8cccda4476edd18f2593a1c23b0dac11
+            var marker_f858824b69e9e1fbed5ef10a32d2a73b = L.marker(
+                [53.3462276, -6.2651293],
+                {}
+            ).addTo(map_019f417b2032d0eef2d03ab5f1496dfe);
+        
+    
+            var icon_c93e1762ae4920003e83ddc31aecdc5a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
             );
-            options.edit.featureGroup = drawnItems;
-            var draw_control_183b0c9eb82888bee54e809528117927 = new L.Control.Draw(
-                options
-            ).addTo( map_8cccda4476edd18f2593a1c23b0dac11 );
-            map_8cccda4476edd18f2593a1c23b0dac11.on(L.Draw.Event.CREATED, function(e) {
-                var layer = e.layer,
-                    type = e.layerType;
-                var coords = JSON.stringify(layer.toGeoJSON());
-                layer.on('click', function() {
-                    alert(coords);
-                    console.log(coords);
-                });
-                drawnItems.addLayer(layer);
-             });
-            map_8cccda4476edd18f2593a1c23b0dac11.on('draw:created', function(e) {
-                drawnItems.addLayer(e.layer);
-            });
+            marker_f858824b69e9e1fbed5ef10a32d2a73b.setIcon(icon_c93e1762ae4920003e83ddc31aecdc5a);
+        
+    
+        var popup_d7d1df9a8d5cfbb7db6765ac4e43b8ed = L.popup({"maxWidth": "100%"});
+
+        
             
+                var html_5580e41e81bad8673f803d57321e5593 = $(`<div id="html_5580e41e81bad8673f803d57321e5593" style="width: 100.0%; height: 100.0%;">EntranceWayTest</div>`)[0];
+                popup_d7d1df9a8d5cfbb7db6765ac4e43b8ed.setContent(html_5580e41e81bad8673f803d57321e5593);
+            
+        
+
+        marker_f858824b69e9e1fbed5ef10a32d2a73b.bindPopup(popup_d7d1df9a8d5cfbb7db6765ac4e43b8ed)
+        ;
+
+        
+    
+    
+            map_019f417b2032d0eef2d03ab5f1496dfe.fitBounds(
+                [[53.3462276, -6.2651293], [53.3462276, -6.2651293]],
+                {}
+            );
         
 </script>
 </html>
