@@ -1,9 +1,0 @@
-Texto de errores para ayudar al usuario
-Documentar los problemas que hemos tenido
-Test implementados
-Coger un trozo de mapa, con un test y salga el resultado
-Que ponga el xml con los errores
-Poligono que cargue el mapa
-Que meta un mapa que pase
-Si ponemos mapas muy grandes no funciona(documentar)
-Dar un nombre de calle y buscar errores y despegable de que calles quiere
